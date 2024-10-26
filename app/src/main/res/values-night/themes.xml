@@ -3,5 +3,7 @@
     <style name="Base.Theme.EventDicoding" parent="Theme.Material3.DayNight">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+
     </style>
 </resources>
