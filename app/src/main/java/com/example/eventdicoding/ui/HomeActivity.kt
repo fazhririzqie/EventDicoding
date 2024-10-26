@@ -35,7 +35,7 @@ class HomeActivity : AppCompatActivity() {
 
         themePreferences = ThemePreferences(this)
 
-        // Apply the dark mode setting before setting the content view
+
         lifecycleScope.launch {
             themePreferences.darkModeFlow.collect { isDarkMode ->
                 AppCompatDelegate.setDefaultNightMode(
@@ -43,6 +43,6 @@ class HomeActivity : AppCompatActivity() {
                     else AppCompatDelegate.MODE_NIGHT_NO
                 )
             }
-            }
+        }
     }
 }
