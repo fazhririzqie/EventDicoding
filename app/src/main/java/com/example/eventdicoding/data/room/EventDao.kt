@@ -23,4 +23,5 @@ interface EventDao {
 
     @Query("SELECT * FROM favorite_event")
     fun getAllFavoriteEvents(): LiveData<List<FavoriteEvent>>
+
 }

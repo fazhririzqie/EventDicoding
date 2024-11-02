@@ -12,7 +12,7 @@ import com.example.eventdicoding.data.entity.FavoriteEvent
 import com.example.eventdicoding.databinding.FragmentFavoriteBinding
 import com.example.eventdicoding.ui.DetailActivity
 import com.example.eventdicoding.ui.FavoriteEventAdapter
-import com.example.eventdicoding.ui.viewmodel.EventViewModel
+import com.example.eventdicoding.ui.EventViewModel
 
 class FavoriteFragment : Fragment(), FavoriteEventAdapter.OnItemClickListener {
 
@@ -36,7 +36,10 @@ class FavoriteFragment : Fragment(), FavoriteEventAdapter.OnItemClickListener {
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.recyclerView.adapter = adapter
 
+        binding.progressBar.visibility = View.VISIBLE
+
         eventViewModel.allFavoriteEvents.observe(viewLifecycleOwner) { favoriteEvents ->
+            binding.progressBar.visibility = View.GONE
             adapter.submitList(favoriteEvents)
         }
     }
@@ -46,7 +49,14 @@ class FavoriteFragment : Fragment(), FavoriteEventAdapter.OnItemClickListener {
             putExtra("EVENT_ID", favoriteEvent.id)
             putExtra("EVENT_NAME", favoriteEvent.name)
             putExtra("EVENT_MEDIA_COVER", favoriteEvent.mediaCover)
-            
+            putExtra("EVENT_OWNER_NAME", favoriteEvent.ownerName)
+            putExtra("EVENT_BEGIN_TIME", favoriteEvent.beginTime)
+            putExtra("EVENT_QUOTA", favoriteEvent.quota?.toString())
+            putExtra("EVENT_DESCRIPTION", favoriteEvent.description)
+            putExtra("EVENT_LINK", favoriteEvent.link)
+            putExtra("EVENT_REGISTRANTS", favoriteEvent.registrants?.toString())
+
+
 
         }
         startActivity(intent)

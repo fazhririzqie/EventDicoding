@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="250dp"
             android:text="@string/title"
-            android:textColor="@android:color/black"
+            android:textColor="?android:textColor"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -47,8 +47,7 @@
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/save_bookmark"
                 android:src="@drawable/baseline_favorite_border_24"
-                android:tag="Not Saved"
-                app:backgroundTint="@color/colorfloating"/>
+                android:tag="Not Saved"/>
 
         </FrameLayout>
 
@@ -65,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/owner"
-                android:textColor="@android:color/black"
+                android:textColor="?android:textColor"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -85,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/date"
-                android:textColor="@android:color/black"
+                android:textColor="?android:textColor"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -97,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sisa Kuota : "
-                android:textColor="@android:color/black"
+                android:textColor="?android:textColor"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -111,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
                 android:text="@string/quota"
-                android:textColor="@android:color/black"
+                android:textColor="?android:textColor"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -165,7 +164,6 @@
             android:layout_gravity="center"
             android:text="@string/register"
             android:textColor="@color/black"
-            app:backgroundTint="@color/colorfloating"
             />
 
     </LinearLayout>

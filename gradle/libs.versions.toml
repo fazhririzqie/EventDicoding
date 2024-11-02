@@ -23,6 +23,7 @@ navigationUiKtx = "2.8.2"
 roomRuntime = "2.5.2"
 roomCompiler = "2.5.2"
 roomKtx = "2.5.2"
+transportApi = "4.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -48,6 +49,7 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
+transport-api = { group = "com.google.android.datatransport", name = "transport-api", version.ref = "transportApi" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

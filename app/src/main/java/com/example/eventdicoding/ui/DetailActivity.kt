@@ -11,7 +11,6 @@ import com.bumptech.glide.Glide
 import com.example.eventdicoding.R
 import com.example.eventdicoding.data.entity.FavoriteEvent
 import com.example.eventdicoding.databinding.ActivityDetailBinding
-import com.example.eventdicoding.ui.viewmodel.EventViewModel
 
 class DetailActivity : AppCompatActivity() {
 
@@ -67,6 +66,12 @@ class DetailActivity : AppCompatActivity() {
                             id = id,
                             name = eventName ?: "Unknown Event",
                             mediaCover = eventMediaCover ?: "",
+                            ownerName = eventOwnerName ?: "Unknown Owner",
+                            beginTime = evenBeginTime ?: "Unknown Time",
+                            quota = eventQuota,
+                            description = eventDescription ?: "No description available",
+                            link = eventLink ?: "",
+                            registrants = eventRegistrants,
                             isBookmarked = true
                         )
                         eventViewModel.insert(listOf(newFavoriteEvent))

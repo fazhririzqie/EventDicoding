@@ -1,4 +1,4 @@
-package com.example.eventdicoding.ui.viewmodel
+package com.example.eventdicoding.ui
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
